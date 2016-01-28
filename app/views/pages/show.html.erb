@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 
-  <h1 style="color: <%= @page.color if @page.color %>"><%= @page.headline %></h1>
+  	<h1 style="color: <%= @page.color if @page.color %>"><%= @page.headline %></h1>
 
-<div class=" btn btn-sm btn-<%= @page.buttoncolor %>"><%= @page.buttontext %></div> 
+	<div class=" btn btn-sm btn-<%= @page.buttoncolor %>"><%= @page.buttontext %></div> 
 <br>
 <%= link_to 'Edit', edit_page_path(@page) %> |
 <%= link_to 'Back', pages_path %>
