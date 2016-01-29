@@ -1,11 +1,10 @@
-<p id="notice"><%= notice %></p>
-<div syle="background-image: <%= link_to image_tag(@page.image.url(:large)), @page.image.url %>">
+<div class="bg-image" style="background-image: url('<%= @page.image.url %>'); no-repeat 50% 50% fixed; background-size: cover; -moz-background-size: cover; -o-background-size: cover; -webkit-background-size: cover;">
+	<p id="notice"><%= notice %></p>
 
   	<h1 style="color: <%= @page.color if @page.color %>"><%= @page.headline %></h1>
-  	
-
+  	    
 	<div class=" btn btn-sm btn-<%= @page.buttoncolor %>"><%= @page.buttontext %></div> 
-<br>
-<%= link_to 'Edit', edit_page_path(@page) %> |
-<%= link_to 'Back', pages_path %>
+	<br>
+	<%= link_to 'Edit', edit_page_path(@page) %> |
+	<%= link_to 'Back', pages_path %>
 </div>
