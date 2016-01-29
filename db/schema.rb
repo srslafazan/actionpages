@@ -11,15 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160128060436) do
+ActiveRecord::Schema.define(version: 20160129021000) do
 
   create_table "pages", force: :cascade do |t|
     t.string   "headline"
     t.string   "color"
     t.string   "buttoncolor"
     t.string   "buttontext"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
 end
