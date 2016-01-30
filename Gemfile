@@ -26,6 +26,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #For uploading images
 gem 'paperclip'
 
+
 # for great responsive UI
 gem 'bootstrap-sass'
 gem 'bootstrap-material-design'
