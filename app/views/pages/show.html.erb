@@ -1,10 +1,19 @@
 <div class="bg-image" style="background-image: url('<%= @page.image.url %>'); no-repeat 50% 50% fixed; background-size: cover; -moz-background-size: cover; -o-background-size: cover; -webkit-background-size: cover;">
+
 	<p id="notice"><%= notice %></p>
 
-  	<h1 style="color: <%= @page.color if @page.color %>"><%= @page.headline %></h1>
-  	    
-	<div class=" btn btn-sm btn-<%= @page.buttoncolor %>"><%= @page.buttontext %></div> 
-	<br>
-	<%= link_to 'Edit', edit_page_path(@page) %> |
-	<%= link_to 'Back', pages_path %>
+  	<h1 class="headline" style="color: <%= @page.color if @page.color %>"><%= @page.headline %></h1>
+
+  	 <div class="subscribe"> 
+		
+		<form>
+ 		 <input type="text" class="span2">
+  		<button type="submit" class="btn btn-sm btn-<%= @page.buttoncolor %>"><%= @page.buttontext %></button>
+		</form>
+		<br>
+	</div>
+	<div class="edit">
+		<%= link_to 'Edit', edit_page_path(@page), class: "btn btn-info btn-lg" %> |
+		<%= link_to 'Back', pages_path, class: "btn btn-warning btn-lg"  %>
+	</div>
 </div>

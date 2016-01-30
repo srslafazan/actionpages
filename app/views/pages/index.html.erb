@@ -1,33 +1,20 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="jumbotron">
+    <p id="notice"><%= notice %></p>
 
-<h1>Listing Pages</h1>
+    <h1>Pages</h1>
+        <% @pages.each do |page| %>
+            <h2><%= page.headline %><h2>
+            <%= link_to image_tag(page.image.url(:med)), page %>
+      
+            <%= link_to 'Show', page, class: "btn btn-info btn-lg" %>
+            <%= link_to 'Edit', edit_page_path(page), class: "btn btn-info btn-lg" %>
+            <%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-info btn-lg" %>
+        <% end %>
+   
 
-<table>
-  <thead>
-    <tr>
-      <th>Headline</th>
-      <th>Color</th>
-      <th>Buttoncolor</th>
-      <th>Buttontext</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <br>
 
-  <tbody>
-    <% @pages.each do |page| %>
-      <tr>
-        <td><%= page.headline %></td>
-        <td><%= page.color %></td>
-        <td><%= page.buttoncolor %></td>
-        <td><%= page.buttontext %></td>
-        <td><%= link_to 'Show', page %></td>
-        <td><%= link_to 'Edit', edit_page_path(page) %></td>
-        <td><%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Page', new_page_path %>
+  <%= link_to 'New Page', new_page_path, class: "btn btn-success btn-lg" %>
+  </div>
+</div>
