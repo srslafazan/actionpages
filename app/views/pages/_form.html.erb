@@ -11,21 +11,21 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :headline %><br>
-    <%= f.text_field :headline %>
+    <%= f.text_field :headline, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :color, "Headline Color" %><br>
-    <%= f.text_field :color %>
+    <%= f.text_field :color, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :buttoncolor, "Button Color" %><br>
-    <%= f.select :buttoncolor, options_for_select([['primary'],['default'],['success'],['info'],['warning'],['danger']]) %>
+    <%= f.select :buttoncolor, options_for_select([['primary'],['default'],['success'],['info'],['warning'],['danger']]), class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :buttontext, "Button Text" %><br>
-    <%= f.text_field :buttontext %>
+    <%= f.text_field :buttontext, class: "form-control" %>
 
   <div class="form-group">
     <%= f.label :image %>
