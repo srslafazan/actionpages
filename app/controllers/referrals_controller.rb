@@ -69,6 +69,6 @@ class ReferralsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def referral_params
-      params.require(:referral).permit(:navcolor, :rheadline, :rheadlinecolor, :rbackgroundcolor, :rboxcolor, :rcountcolor, :rhow, :rhowcolor, :rightheadline, :rightsub, :rightcolor, :bottomsub, :reward1, :reward2, :reward3, :reward4)
+      params.require(:referral).permit(:image, :navcolor, :rheadline, :rheadlinecolor, :rbackgroundcolor, :rboxcolor, :rcountcolor, :rhow, :rhowcolor, :rightheadline, :rightsub, :rightcolor, :bottomsub, :reward1, :reward2, :reward3, :reward4)
     end
 end
