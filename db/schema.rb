@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160129021000) do
+ActiveRecord::Schema.define(version: 20160131182634) do
 
   create_table "pages", force: :cascade do |t|
     t.string   "headline"
@@ -24,6 +24,28 @@ ActiveRecord::Schema.define(version: 20160129021000) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+  end
+
+  create_table "referrals", force: :cascade do |t|
+    t.string   "navcolor"
+    t.string   "rheadline"
+    t.string   "rheadlinecolor"
+    t.string   "rbackgroundcolor"
+    t.string   "rboxcolor"
+    t.string   "rcountcolor"
+    t.string   "rhow"
+    t.string   "rhowcolor"
+    t.string   "rightheadline"
+    t.string   "rightsub"
+    t.string   "rightcolor"
+    t.string   "bottomsub"
+    t.string   "reward1"
+    t.string   "reward2"
+    t.string   "reward3"
+    t.string   "reward4"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.integer  "page_id"
   end
 
 end

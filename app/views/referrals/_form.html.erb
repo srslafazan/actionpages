@@ -1,0 +1,81 @@
+<%= form_for(@referral) do |f| %>
+  <% if @referral.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@referral.errors.count, "error") %> prohibited this referral from being saved:</h2>
+
+      <ul>
+      <% @referral.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :navcolor %><br>
+    <%= f.text_field :navcolor %>
+  </div>
+  <div class="field">
+    <%= f.label :rheadline %><br>
+    <%= f.text_field :rheadline %>
+  </div>
+  <div class="field">
+    <%= f.label :rheadlinecolor %><br>
+    <%= f.text_field :rheadlinecolor %>
+  </div>
+  <div class="field">
+    <%= f.label :rbackgroundcolor %><br>
+    <%= f.text_field :rbackgroundcolor %>
+  </div>
+  <div class="field">
+    <%= f.label :rboxcolor %><br>
+    <%= f.text_field :rboxcolor %>
+  </div>
+  <div class="field">
+    <%= f.label :rcountcolor %><br>
+    <%= f.text_field :rcountcolor %>
+  </div>
+  <div class="field">
+    <%= f.label :rhow %><br>
+    <%= f.text_field :rhow %>
+  </div>
+  <div class="field">
+    <%= f.label :rhowcolor %><br>
+    <%= f.text_field :rhowcolor %>
+  </div>
+  <div class="field">
+    <%= f.label :rightheadline %><br>
+    <%= f.text_field :rightheadline %>
+  </div>
+  <div class="field">
+    <%= f.label :rightsub %><br>
+    <%= f.text_field :rightsub %>
+  </div>
+  <div class="field">
+    <%= f.label :rightcolor %><br>
+    <%= f.text_field :rightcolor %>
+  </div>
+  <div class="field">
+    <%= f.label :bottomsub %><br>
+    <%= f.text_field :bottomsub %>
+  </div>
+  <div class="field">
+    <%= f.label :reward1 %><br>
+    <%= f.text_field :reward1 %>
+  </div>
+  <div class="field">
+    <%= f.label :reward2 %><br>
+    <%= f.text_field :reward2 %>
+  </div>
+  <div class="field">
+    <%= f.label :reward3 %><br>
+    <%= f.text_field :reward3 %>
+  </div>
+  <div class="field">
+    <%= f.label :reward4 %><br>
+    <%= f.text_field :reward4 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
