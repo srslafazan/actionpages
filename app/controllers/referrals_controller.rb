@@ -26,11 +26,11 @@ class ReferralsController < ApplicationController
   # POST /referrals.json
   def create
     @page = Page.find(params[:page_id])
-    @referral = @pagereferral.new(referral_params)
+    @referral = Referral.new(referral_params)
 
     respond_to do |format|
       if @referral.save
-        format.html { redirect_to @referral, notice: 'Referral was successfully created.' }
+        format.html { redirect_to @page, notice: 'Referral was successfully created.' }
         format.json { render :show, status: :created, location: @referral }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class ReferralsController < ApplicationController
   def update
     respond_to do |format|
       if @referral.update(referral_params)
-        format.html { redirect_to @referral, notice: 'Referral was successfully updated.' }
+        format.html { redirect_to @referral.page, notice: 'Referral was successfully updated.' }
         format.json { render :show, status: :ok, location: @referral }
       else
         format.html { render :edit }

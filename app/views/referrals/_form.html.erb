@@ -1,4 +1,4 @@
-<%= form_for([@page, @referral]), { multipart: true } do |f| %>
+<%= form_for([@page, @referral], { multipart: true }) do |f| %>
   <% if @referral.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@referral.errors.count, "error") %> prohibited this referral from being saved:</h2>
