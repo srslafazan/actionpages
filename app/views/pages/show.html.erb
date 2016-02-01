@@ -3,8 +3,11 @@
 
 	
 	<div>
+		<% if @page.referral === nil %>
 		<%= link_to 'New Referral Page', new_page_referral_path(@page), class: "btn btn-lg btn-success" %>
+		<% else %>
 		<%= link_to 'Show Referral Page', page_referral_path(@page, @referral), class: "btn btn-lg btn-success" %>
+		<% end %>
 		<%= link_to 'Edit', edit_page_path(@page), class: "btn btn-info btn-lg", data: {remote: true, toggle: "modal", target: "#myModal"} %> |
 		<%= link_to 'Back', pages_path, class: "btn btn-warning btn-lg"  %>
 		<p id="notice" class="alert-dismissible alert-success"><%= notice %></p>

@@ -1,10 +1,10 @@
-<%= form_for([@page, @referral], { multipart: true }) do |f| %>
-  <% if @referral.errors.any? %>
+<%= form_for([@page, @page.referral], { multipart: true }) do |f| %>
+  <% if f.object.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@referral.errors.count, "error") %> prohibited this referral from being saved:</h2>
+      <h2><%= pluralize(f.object.errors.count, "error") %> prohibited this referral from being saved:</h2>
 
       <ul>
-      <% @referral.errors.full_messages.each do |message| %>
+      <% @f.object.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>

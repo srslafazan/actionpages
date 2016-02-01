@@ -15,7 +15,7 @@ class ReferralsController < ApplicationController
   # GET /referrals/new
   def new
     @page = Page.find(params[:page_id])
-    @referral = @page.referral.new
+    @page.referral = Referral.new
   end
 
   # GET /referrals/1/edit
@@ -26,7 +26,7 @@ class ReferralsController < ApplicationController
   # POST /referrals.json
   def create
     @page = Page.find(params[:page_id])
-    @referral = Referral.new(referral_params)
+    @page.referral = Referral.new(referral_params)
 
     respond_to do |format|
       if @referral.save
@@ -44,7 +44,7 @@ class ReferralsController < ApplicationController
   def update
     respond_to do |format|
       if @referral.update(referral_params)
-        format.html { redirect_to @referral.page, notice: 'Referral was successfully updated.' }
+        format.html { redirect_to page_referral_path, notice: 'Referral was successfully updated.' }
         format.json { render :show, status: :ok, location: @referral }
       else
         format.html { render :edit }
