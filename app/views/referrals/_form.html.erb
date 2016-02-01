@@ -10,90 +10,115 @@
       </ul>
     </div>
   <% end %>
+
 <div class="row">
   <div class="col-lg-3">
     <div class="form-group">
-      <%= f.label :navcolor %><br>
-      <%= f.text_field :navcolor, class: "form-control" %>
+      <%= f.label :rightheadline, "Right Headline" %><br>
+      <%= f.text_field :rightheadline, class: "form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :rheadline %><br>
+      <%= f.label :rheadline, " Left Headline" %><br>
       <%= f.text_field :rheadline, class: "form-control" %>
     </div>
   </div>
 
    <div class="col-lg-3">
     <div class="form-group">
-      <%= f.label :rheadlinecolor %><br>
+      <%= f.label :rheadlinecolor, "Headline Color" %><br>
       <%= f.text_field :rheadlinecolor, class: "form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :rbackgroundcolor %><br>
+      <%= f.label :rbackgroundcolor, "Top Background" %><br>
       <%= f.text_field :rbackgroundcolor, class: "form-control" %>
     </div>
   </div>
 
    <div class="col-lg-3">
     <div class="form-group">
-      <%= f.label :rboxcolor %><br>
+      <%= f.label :rboxcolor, "Rewards Text Color" %><br>
       <%= f.text_field :rboxcolor, class: "form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :rcountcolor %><br>
+      <%= f.label :rcountcolor, "# Friend's Color" %><br>
       <%= f.text_field :rcountcolor, class: "form-control" %>
     </div>
   </div>
 
    <div class="col-lg-3">
     <div class="form-group">
-      <%= f.label :rhow %><br>
-      <%= f.text_field :rhow, class: "form-control" %>
+      <%= f.label :rhowcolor, "How it works text color" %><br>
+      <%= f.text_field :rhowcolor, class: "form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :rhowcolor %><br>
-      <%= f.text_field :rhowcolor, class: "form-control" %>
+      <%= f.label :rhow, "How it works text" %><br>
+      <%= f.text_field :rhow, class: "form-control" %>
     </div>
   </div>
 </div>
 
-    <div class="form-group">
-      <%= f.label :rightheadline %><br>
-      <%= f.text_field :rightheadline, class: "form-control" %>
+<div class="row">
+  <div class="col-lg-3">
+     <div class="form-group">
+      <%= f.label :navcolor, "Navbar Color" %><br>
+      <%= f.text_field :navcolor, class: "form-control" %>
     </div>
+  </div>
+
+  <div class="col-lg-3">
     <div class="form-group">
-      <%= f.label :rightsub %><br>
+      <%= f.label :rightsub, "Top Subheadline" %><br>
       <%= f.text_field :rightsub, class: "form-control" %>
     </div>
+  </div>
 
+ <div class="col-lg-3">
     <div class="form-group">
-      <%= f.label :rightcolor %><br>
-      <%= f.text_field :rightcolor, class: "form-control" %>
-    </div>
-    <div class="form-group">
-      <%= f.label :bottomsub %><br>
+      <%= f.label :bottomsub, "Bottom Subheadline" %><br>
       <%= f.text_field :bottomsub, class: "form-control" %>
     </div>
+  </div>
+
+  <div class="col-lg-3">
+    <div class="form-group">
+      <%= f.label :rightcolor, "Text Color For Right Column" %><br>
+      <%= f.text_field :rightcolor, class: "form-control" %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
  
-      <h2> Rewards</h2>
+    <div class="col-lg-3"> 
       <div class="form-group">
         <%= f.label :reward1, "First Reward Level" %><br>
         <%= f.text_field :reward1, class: "form-control" %>
       </div>
+    </div>
 
+    <div class="col-lg-3"> 
       <div class="form-group">
         <%= f.label :reward2, "Second Reward Level" %><br>
         <%= f.text_field :reward2, class: "form-control" %>
       </div>
+    </div>
 
+    <div class="col-lg-3"> 
       <div class="form-group">
         <%= f.label :reward3, "Third Reward Level" %><br>
         <%= f.text_field :reward3, class: "form-control" %>
       </div>
+    </div>
    
+    <div class="col-lg-3"> 
       <div class="form-group">
         <%= f.label :reward4, "Fourth Reward Level" %><br>
         <%= f.text_field :reward4, class: "form-control" %>
       </div>
+    </div>
+  </div>
+
+
      <div class="form-group">
         <%= f.label :image %>
         <%= f.file_field :image%>

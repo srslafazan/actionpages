@@ -1,4 +1,9 @@
-<div class="navbar" style="background-color: <%= @referral.navcolor %> "></div>
+<div class="navbar" style="background-color: <%= @referral.navcolor %> ">
+
+  <%= link_to 'Edit', edit_referral_path(@referral), class: "navbar-brand", data: {remote: true, toggle: "modal", target: "#myModal"} %> 
+    <%= link_to 'Back', referrals_path, class: "navbar-brand" %>
+
+</div>
 
   <div class="top text-center" style="background-color: <%= @referral.rbackgroundcolor %>">
   
@@ -33,42 +38,51 @@
   <h1 class="text-center" style="color: <%= @referral.rhowcolor %>">
     <%= @referral.rhow %>
   </h1>
-  <p class="text-center" style="color: <%= @referral.rcountcolor %>"> No friends Referred yet. Keep Sharing!</p>
-
-      
-
-
-      
-  
+  <p class="text-center" style="color: <%= @referral.rcountcolor %>"> You've reffered 5 friends. Keep Sharing!</p>
 
    <div class="row">
     <div class="col-md-3">
       <div class="box" style="color: <%= @referral.rboxcolor %>">
-      <%= @referral.reward1 %>
+        <a href="javascript:void(0)" class="btn btn-success btn-fab"><i class="material-icons">5</i></a>
+        <h2>  
+          <%= @referral.reward1 %>
+        </h2>
     </div>
     </div>
 
      <div class="col-md-3">
       <div class="box" style="color: <%= @referral.rboxcolor %>">
-      <%= @referral.reward2 %>
+        <a href="javascript:void(0)" class="btn btn-warning btn-fab"><i class="material-icons">10</i></a>
+
+        <h2>
+          <%= @referral.reward2 %>
+        </h2>
       </div>
      </div>
 
     <div class="col-md-3">
       <div class="box" style="color: <%= @referral.rboxcolor %>">
-      <%= @referral.reward3 %>
+        <a href="javascript:void(0)" class="btn btn-warning btn-fab"><i class="material-icons">25</i></a>
+      <h2>
+        <%= @referral.reward3 %>
+      </h2>
+
       </div>
     </div>
 
     <div class="col-md-3">
       <div class="box" style="color: <%= @referral.rboxcolor %>">
-      <%= @referral.reward4 %>
+        <a href="javascript:void(0)" class="btn btn-warning btn-fab"><i class="material-icons">50</i></a>
+
+        <h2>
+          <%= @referral.reward4 %>
+        </h2>
+     
       </div>
     </div>
   </div>
 
-  <%= link_to 'Edit', edit_referral_path(@referral), class: "btn btn-lg btn-info" %> |
-  <%= link_to 'Back', referrals_path, class: "btn btn-lg btn-success" %>
 </div>
+<%= render "edit_modal" %>
 
 
