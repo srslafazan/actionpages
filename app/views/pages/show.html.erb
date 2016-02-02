@@ -1,6 +1,4 @@
 <div class="bg-image" style="background-image: url('<%= @page.image.url %>'); no-repeat 50% 50% fixed; background-size: cover; -moz-background-size: cover; -o-background-size: cover; -webkit-background-size: cover;">
-
-
 	
 	<div>
 		<% if @page.referral === nil %>
@@ -14,7 +12,7 @@
 	</div>
 
   	<div class="headline"> 
-		<h1 class="headline" style="color: <%= @page.color if @page.color %>">
+		<h1 style="color: <%= @page.color if @page.color %>">
 			<%= @page.headline %>
 		</h1>
 

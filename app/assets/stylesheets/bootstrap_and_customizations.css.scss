@@ -10,8 +10,8 @@
 .headline {
 	text-align: center;
 	position: relative;
-    left: 0%;
-    top: 11%;
+    left: 10%;
+    top: 25%;
     width: 77%;
 }
 
@@ -43,6 +43,53 @@
     height:50%;
     margin: 15% auto;
 
+}
+// Referral Link and sharing 
+.copy-link {
+    border: 1px solid #D1D0C7;
+    background: #FFF;
+    padding: 10px 0;
+    width: 320px;
+    text-transform: none;
+    font-size: 11px;
+    margin: 20px auto 0;
+}
+
+.social-links {
+    width: 120px;
+    height: 37px;
+    margin: 25px auto 0;
+    text-align: center;
+}
+.social-links a, .social-links div{
+    display: inline-block;
+}
+.social-links .sep{
+    height: 28px;
+    width: 1px;
+    background: #BAB9BA;
+    margin: 0 20px;
+}
+.social-links .fb{
+    background: image-url('fb.png');
+    background-size: 27px 27px;
+    width: 27px;
+    height: 27px;
+}
+.social-links .fb{
+    background: image-url('fb@2x.png');
+    background-size: 27px 27px;
+}
+.social-links .twit{
+    background: image-url('twit@2x.png');
+    background-size: 27px 27px;
+}
+
+.social-links .twit{
+    background: image-url('twit.png');
+    background-size: 27px 27px;
+    width: 27px;
+    height: 27px;
 }
 
 //top inage on referral page
