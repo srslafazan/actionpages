@@ -14,6 +14,7 @@
     top: 25%;
     width: 77%;
 }
+// modal postion left
 
 // edit page form css
 .edit {
@@ -28,20 +29,18 @@
 }
 
 //referral page
-.top {
-    width: 100%;
-    height: 50%;
-    margin: -10% auto;
-}
 
+.refnav {
+    margin-bottom: -10px;
+}
 .toprow {
-    padding: 10% 10%;
+    padding: 2% 10% 2% 10%;
 }
 
 .bottom {
     width: 70%;
-    height:50%;
-    margin: 15% auto;
+    height: 50%;
+    margin: 0% auto;
 
 }
 // Referral Link and sharing 
@@ -94,7 +93,7 @@
 
 //top inage on referral page
 .imagetop {
-    height: 40vh;
+    height: 50vh;
 }
 //rewards boxes
 .box {

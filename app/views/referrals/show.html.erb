@@ -1,4 +1,4 @@
-<div class="navbar" style="background-color: <%= @referral.navcolor %> ">
+<div class="navbar refnav" style="background-color: <%= @referral.navcolor %> ">
 
   <%= link_to 'Edit', edit_page_referral_path, class: "navbar-brand", data: {remote: true, toggle: "modal", target: "#myModal"} %> 
     <%= link_to 'Back', @referral.page, class: "navbar-brand" %>
@@ -11,10 +11,9 @@
   
   <p id="notice"><%= notice %></p>
 
-    <div class="row toprow">
+      <div class="row toprow">
         <div class="col-md-6 imagetop" style="background-image: url('<%= @referral.image.url %>'); no-repeat 50% 50% fixed; background-size: cover; -moz-background-size: cover; -o-background-size: cover; -webkit-background-size: cover;">
-
-
+          
           <h2 style="color: <%= @referral.rheadlinecolor %>">
             <%= @referral.rheadline %>
           </h2>
@@ -36,29 +35,29 @@
 
         <div class="copy-link"><%= root_url %>?ref=82938e4D</div>
          <% twitter_message = "#Learn to code build a viral landing page. @Viralrails launching soon." %>
-                <div class="social-links">
-                    <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=82938e4D&title=ViralRails" class="fb" target="_blank"></a>
-                    <div class="sep"></div>
-                    <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=82938e4D&text=<%= CGI::escape(twitter_message) %>" class="twit" target="_blank"></a>
-                </div>
+        <div class="social-links">
+            <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=82938e4D&title=ViralRails" class="fb" target="_blank"></a>
+            <div class="sep"></div>
+            <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=82938e4D&text=<%= CGI::escape(twitter_message) %>" class="twit" target="_blank"></a>
+        </div>
       </div>
 
   </div>
 </div>
 
 <div class="bottom">
-  <h1 class="text-center" style="color: <%= @referral.rhowcolor %>">
+  <h4 class="text-center" style="color: <%= @referral.rhowcolor %>">
     <%= @referral.rhow %>
-  </h1>
-  <p class="text-center" style="color: <%= @referral.rcountcolor %>"> You've reffered 5 friends. Keep Sharing!</p>
+  </h4>
+  <p class="text-center" style="color: <%= @referral.rcountcolor %>"> You've refered 5 friends. Keep Sharing!</p>
 
    <div class="row">
     <div class="col-md-3">
       <div class="box" style="color: <%= @referral.rboxcolor %>">
         <a href="javascript:void(0)" class="btn btn-success btn-fab"><i class="material-icons">5</i></a>
-        <h2>  
+        <h3>  
           <%= @referral.reward1 %>
-        </h2>
+        </h3>
     </div>
     </div>
 
@@ -66,18 +65,18 @@
       <div class="box" style="color: <%= @referral.rboxcolor %>">
         <a href="javascript:void(0)" class="btn btn-warning btn-fab"><i class="material-icons">10</i></a>
 
-        <h2>
+        <h3>
           <%= @referral.reward2 %>
-        </h2>
+        </h3>
       </div>
      </div>
 
     <div class="col-md-3">
       <div class="box" style="color: <%= @referral.rboxcolor %>">
         <a href="javascript:void(0)" class="btn btn-warning btn-fab"><i class="material-icons">25</i></a>
-      <h2>
+      <h3>
         <%= @referral.reward3 %>
-      </h2>
+      </h3>
 
       </div>
     </div>
@@ -86,9 +85,9 @@
       <div class="box" style="color: <%= @referral.rboxcolor %>">
         <a href="javascript:void(0)" class="btn btn-warning btn-fab"><i class="material-icons">50</i></a>
 
-        <h2>
+        <h3>
           <%= @referral.reward4 %>
-        </h2>
+        </h3>
      
       </div>
     </div>
