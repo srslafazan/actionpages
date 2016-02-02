@@ -17,22 +17,31 @@
     </div>
     <div class="form-group">
       <%= f.label :color, "Headline Color" %><br>
-      <%= f.text_field :color, class: "form-control" %>
+      <%= f.text_field :color %>
     </div>
+   
     <div class="form-group">
       <%= f.label :buttoncolor, "Button Color" %><br>
-      <%= f.select :buttoncolor, options_for_select([['primary'],['default'],['success'],['info'],['warning'],['danger']]), class: "form-control" %>
+      <%= f.select :buttoncolor, options_for_select([['info'],['primary'],['default'],['success'],['warning'],['danger']]), class: "form-control" %>
+        <button class="btn btn-xs btn-info">info</button>
+        <button class="btn btn-xs btn-primary">primary</button>
+        <button class="btn btn-xs btn-default">default</button>
+        <button class="btn btn-xs btn-success">success</button>
+        <button class="btn btn-xs btn-warning">warning</button>
+        <button class="btn btn-xs btn-danger">danger</button>
     </div>
+
+          
     <div class="form-group">
       <%= f.label :buttontext, "Button Text" %><br>
-      <%= f.text_field :buttontext, class: "form-control" %>
+      <%= f.text_field :buttontext %>
       <br>
+    </div>
     <div class="form-group">
       <%= f.label :image %>
       <%= f.file_field :image %>
     </div>
     
-    </div>
     <br>
     <div class="actions">
       <%= f.submit class: "btn btn-sm btn-success" %>
