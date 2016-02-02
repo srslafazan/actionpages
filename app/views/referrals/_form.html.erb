@@ -10,122 +10,95 @@
       </ul>
     </div>
   <% end %>
-
-<div class="row">
-  <div class="col-lg-3">
-    <div class="form-group">
-      <%= f.label :rightheadline, "Right Headline" %><br>
-      <%= f.text_field :rightheadline, class: "form-control" %>
-    </div>
-    <div class="form-group">
-      <%= f.label :rheadline, " Left Headline" %><br>
-      <%= f.text_field :rheadline, class: "form-control" %>
-    </div>
+  <div class="form-group">
+    <%= f.label :rightheadline, "Right Headline" %><br>
+    <%= f.text_field :rightheadline, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :rheadline, " Left Headline" %><br>
+    <%= f.text_field :rheadline, class: "form-control" %>
   </div>
 
-   <div class="col-lg-3">
-    <div class="form-group">
-      <%= f.label :rheadlinecolor, "Headline Color" %><br>
-      <%= f.text_field :rheadlinecolor, class: "form-control" %>
-    </div>
-    <div class="form-group">
-      <%= f.label :rbackgroundcolor, "Top Background" %><br>
-      <%= f.text_field :rbackgroundcolor, class: "form-control" %>
-    </div>
+  <div class="form-group">
+    <%= f.label :rheadlinecolor, "Headline Color" %><br>
+    <%= f.text_field :rheadlinecolor, class: "form-control" %>
   </div>
-
-   <div class="col-lg-3">
-    <div class="form-group">
-      <%= f.label :rboxcolor, "Rewards Text Color" %><br>
-      <%= f.text_field :rboxcolor, class: "form-control" %>
-    </div>
-    <div class="form-group">
-      <%= f.label :rcountcolor, "# Friend's Color" %><br>
-      <%= f.text_field :rcountcolor, class: "form-control" %>
-    </div>
-  </div>
-
-   <div class="col-lg-3">
-    <div class="form-group">
-      <%= f.label :rhowcolor, "How it works text color" %><br>
-      <%= f.text_field :rhowcolor, class: "form-control" %>
-    </div>
-    <div class="form-group">
-      <%= f.label :rhow, "How it works text" %><br>
-      <%= f.text_field :rhow, class: "form-control" %>
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-lg-3">
-     <div class="form-group">
-      <%= f.label :navcolor, "Navbar Color" %><br>
-      <%= f.text_field :navcolor, class: "form-control" %>
-    </div>
-  </div>
-
-  <div class="col-lg-3">
-    <div class="form-group">
-      <%= f.label :rightsub, "Top Subheadline" %><br>
-      <%= f.text_field :rightsub, class: "form-control" %>
-    </div>
-  </div>
-
- <div class="col-lg-3">
-    <div class="form-group">
-      <%= f.label :bottomsub, "Bottom Subheadline" %><br>
-      <%= f.text_field :bottomsub, class: "form-control" %>
-    </div>
-  </div>
-
-  <div class="col-lg-3">
-    <div class="form-group">
-      <%= f.label :rightcolor, "Text Color For Right Column" %><br>
-      <%= f.text_field :rightcolor, class: "form-control" %>
-    </div>
-  </div>
-</div>
-
-<div class="row">
- 
-    <div class="col-lg-3"> 
-      <div class="form-group">
-        <%= f.label :reward1, "First Reward Level" %><br>
-        <%= f.text_field :reward1, class: "form-control" %>
-      </div>
-    </div>
-
-    <div class="col-lg-3"> 
-      <div class="form-group">
-        <%= f.label :reward2, "Second Reward Level" %><br>
-        <%= f.text_field :reward2, class: "form-control" %>
-      </div>
-    </div>
-
-    <div class="col-lg-3"> 
-      <div class="form-group">
-        <%= f.label :reward3, "Third Reward Level" %><br>
-        <%= f.text_field :reward3, class: "form-control" %>
-      </div>
-    </div>
-   
-    <div class="col-lg-3"> 
-      <div class="form-group">
-        <%= f.label :reward4, "Fourth Reward Level" %><br>
-        <%= f.text_field :reward4, class: "form-control" %>
-      </div>
-    </div>
+  <div class="form-group">
+    <%= f.label :rbackgroundcolor, "Top Background" %><br>
+    <%= f.text_field :rbackgroundcolor, class: "form-control" %>
   </div>
 
 
-     <div class="form-group">
-        <%= f.label :image %>
-        <%= f.file_field :image%>
-      </div>
+  <div class="form-group">
+    <%= f.label :rboxcolor, "Rewards Text Color" %><br>
+    <%= f.text_field :rboxcolor, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :rcountcolor, "# Friend's Color" %><br>
+    <%= f.text_field :rcountcolor, class: "form-control" %>
+  </div>
+
+
+  <div class="form-group">
+    <%= f.label :rhowcolor, "How it works text color" %><br>
+    <%= f.text_field :rhowcolor, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :rhow, "How it works text" %><br>
+    <%= f.text_field :rhow, class: "form-control" %>
+  </div>
+   <div class="form-group">
+    <%= f.label :navcolor, "Navbar Color" %><br>
+    <%= f.text_field :navcolor, class: "form-control" %>
+  </div>
+
+
+
+  <div class="form-group">
+    <%= f.label :rightsub, "Top Subheadline" %><br>
+    <%= f.text_field :rightsub, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :bottomsub, "Bottom Subheadline" %><br>
+    <%= f.text_field :bottomsub, class: "form-control" %>
+  </div>
+
+
+
+  <div class="form-group">
+    <%= f.label :rightcolor, "Text Color For Right Column" %><br>
+    <%= f.text_field :rightcolor, class: "form-control" %>
+  </div>
+
+
+  <div class="form-group">
+    <%= f.label :reward1, "First Reward Level" %><br>
+    <%= f.text_field :reward1, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :reward2, "Second Reward Level" %><br>
+    <%= f.text_field :reward2, class: "form-control" %>
+  </div>
   
 
+
+  <div class="form-group">
+    <%= f.label :reward3, "Third Reward Level" %><br>
+    <%= f.text_field :reward3, class: "form-control" %>
+  </div>
+
+    <div class="form-group">
+      <%= f.label :reward4, "Fourth Reward Level" %><br>
+      <%= f.text_field :reward4, class: "form-control" %>
+    </div>
+  <div class="form-group">
+    <%= f.label :image %>
+    <%= f.file_field :image%>
+  </div>
+
   <div class="actions">
-    <%= f.submit class: "btn btn-lg btn-success" %>
+    <%= f.submit class: "btn btn-sm btn-success" %>
   </div>
 <% end %>

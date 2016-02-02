@@ -1,6 +1,5 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
 .bg-image {
 	 height:100vh;
 }
@@ -10,11 +9,16 @@
 .headline {
 	text-align: center;
 	position: relative;
-    left: 10%;
+    left: 25%;
     top: 25%;
     width: 77%;
 }
 // modal postion left
+#myModal {
+    top: 5%;
+    right: 50%;
+    outline: none;
+}
 
 // edit page form css
 .edit {
