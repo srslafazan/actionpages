@@ -1,0 +1,9 @@
+development:
+  access_key_id: AKIAJJ5CPQMKWWWEV7WA
+  secret_access_key: 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
+  S3_BUCKET_NAME: actionpagesco
+
+production:
+  access_key_id: AKIAJJ5CPQMKWWWEV7WA
+  secret_access_key: 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
+  S3_BUCKET_NAME: actionpagesco

@@ -26,6 +26,9 @@ gem 'devise'
 #For uploading images
 gem 'paperclip'
 
+# For image upload to aws
+gem 'aws-sdk'
+
 # for great responsive UI
 gem 'bootstrap-sass'
 gem 'bootstrap-material-design'
