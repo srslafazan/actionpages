@@ -1,34 +1,34 @@
-<div class="navbar refnav" style="background-color: <%= @referral.navcolor %> ">
+<div class="navbar refnav" style="background-color: <%= @referralpage.navcolor %> ">
 
-  <%= link_to 'Edit', edit_page_referral_path, class: "navbar-brand", data: {remote: true, toggle: "modal", target: "#myModal"} %> 
-    <%= link_to 'Back', @referral.page, class: "navbar-brand" %>
+  <%= link_to 'Edit', edit_page_referralpage_path, class: "navbar-brand", data: {remote: true, toggle: "modal", target: "#myModal"} %> 
+    <%= link_to 'Back', @referralpage.page, class: "navbar-brand" %>
     <%= link_to 'Home', root_path, class: "navbar-brand" %>
     
 
 </div>
 
-  <div class="top text-center" style="background-color: <%= @referral.rbackgroundcolor %>">
+  <div class="top text-center" style="background-color: <%= @referralpage.rbackgroundcolor %>">
  
       <div class="row toprow">
-        <div class="col-md-6 imagetop" style="background-image: url('<%= @referral.image.url %>'); no-repeat 50% 50% fixed; background-size: cover; -moz-background-size: cover; -o-background-size: cover; -webkit-background-size: cover;">
+        <div class="col-md-6 imagetop" style="background-image: url('<%= @referralpage.image.url %>'); no-repeat 50% 50% fixed; background-size: cover; -moz-background-size: cover; -o-background-size: cover; -webkit-background-size: cover;">
 
-          <h2 style="color: <%= @referral.rheadlinecolor %>; padding-top: 20%;">
-            <%= @referral.rheadline %>
+          <h2 style="color: <%= @referralpage.rheadlinecolor %>; padding-top: 20%;">
+            <%= @referralpage.rheadline %>
           </h2>
         </div>
      
 
-      <div class="col-md-6" style="color: <%= @referral.rightcolor %>">
+      <div class="col-md-6" style="color: <%= @referralpage.rightcolor %>">
         <h2>
-         <%= @referral.rightheadline %>
+         <%= @referralpage.rightheadline %>
         <h2>
 
         <h3>
-          <%= @referral.rightsub %>
+          <%= @referralpage.rightsub %>
         </h3>
 
         <h4>
-        <%= @referral.bottomsub %>
+        <%= @referralpage.bottomsub %>
         </h4>
 
         <div class="copy-link"><%= root_url %>?ref=82938e4D</div>
@@ -43,47 +43,47 @@
 </div>
 
 <div class="bottom">
-  <h4 class="text-center" style="color: <%= @referral.rhowcolor %>">
-    <%= @referral.rhow %>
+  <h4 class="text-center" style="color: <%= @referralpage.rhowcolor %>">
+    <%= @referralpage.rhow %>
   </h4>
-  <p class="text-center" style="color: <%= @referral.rcountcolor %>"> You've refered 5 friends. Keep Sharing!</p>
+  <p class="text-center" style="color: <%= @referralpage.rcountcolor %>"> You've refered 5 friends. Keep Sharing!</p>
 
    <div class="row">
     <div class="col-md-3">
-      <div class="box" style="color: <%= @referral.rboxcolor %>">
+      <div class="box" style="color: <%= @referralpage.rboxcolor %>">
         <a href="javascript:void(0)" class="btn btn-success btn-fab"><i class="material-icons">5</i></a>
         <h3>  
-          <%= @referral.reward1 %>
+          <%= @referralpage.reward1 %>
         </h3>
     </div>
   </div>
 
      <div class="col-md-3">
-      <div class="box" style="color: <%= @referral.rboxcolor %>">
+      <div class="box" style="color: <%= @referralpage.rboxcolor %>">
         <a href="javascript:void(0)" class="btn btn-warning btn-fab"><i class="material-icons">10</i></a>
 
         <h3>
-          <%= @referral.reward2 %>
+          <%= @referralpage.reward2 %>
         </h3>
       </div>
      </div>
 
     <div class="col-md-3">
-      <div class="box" style="color: <%= @referral.rboxcolor %>">
+      <div class="box" style="color: <%= @referralpage.rboxcolor %>">
         <a href="javascript:void(0)" class="btn btn-warning btn-fab"><i class="material-icons">25</i></a>
       <h3>
-        <%= @referral.reward3 %>
+        <%= @referralpage.reward3 %>
       </h3>
 
       </div>
     </div>
 
     <div class="col-md-3">
-      <div class="box" style="color: <%= @referral.rboxcolor %>">
+      <div class="box" style="color: <%= @referralpage.rboxcolor %>">
         <a href="javascript:void(0)" class="btn btn-warning btn-fab"><i class="material-icons">50</i></a>
 
         <h3>
-          <%= @referral.reward4 %>
+          <%= @referralpage.reward4 %>
         </h3>
      
       </div>

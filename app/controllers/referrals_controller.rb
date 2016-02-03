@@ -1,78 +1,78 @@
-class ReferralsController < ApplicationController
-  before_action :set_referral, only: [:show, :edit, :update, :destroy]
+class referralpagesController < ApplicationController
+  before_action :set_referralpage, only: [:show, :edit, :update, :destroy]
 
-  # GET /referrals
-  # GET /referrals.json
+  # GET /referralpages
+  # GET /referralpages.json
   def index
-    @referrals = Referral.all
+    @referralpages = referralpage.all
   end
 
-  # GET /referrals/1
-  # GET /referrals/1.json
+  # GET /referralpages/1
+  # GET /referralpages/1.json
   def show
-    @twitter_message = @referral.twitter
+    @twitter_message = @referralpage.twitter
   end
 
-  # GET /referrals/new
+  # GET /referralpages/new
   def new
     @page = Page.find(params[:page_id])
-    @page.referral = Referral.new
+    @page.referralpage = referralpage.new
   end
 
-  # GET /referrals/1/edit
+  # GET /referralpages/1/edit
   def edit
   end
 
-  # POST /referrals
-  # POST /referrals.json
+  # POST /referralpages
+  # POST /referralpages.json
   def create
     @page = Page.find(params[:page_id])
-    @page.referral = Referral.new(referral_params)
+    @page.referralpage = referralpage.new(referralpage_params)
 
     respond_to do |format|
-      if @referral.save
-        format.html { redirect_to @page, notice: 'Referral was successfully created.' }
-        format.json { render :show, status: :created, location: @referral }
+      if @referralpage.save
+        format.html { redirect_to @page, notice: 'referralpage was successfully created.' }
+        format.json { render :show, status: :created, location: @referralpage }
       else
         format.html { render :new }
-        format.json { render json: @referral.errors, status: :unprocessable_entity }
+        format.json { render json: @referralpage.errors, status: :unprocessable_entity }
       end
     end
   end
 
-  # PATCH/PUT /referrals/1
-  # PATCH/PUT /referrals/1.json
+  # PATCH/PUT /referralpages/1
+  # PATCH/PUT /referralpages/1.json
   def update
     respond_to do |format|
-      if @referral.update(referral_params)
-        format.html { redirect_to page_referral_path, notice: 'Referral was successfully updated.' }
-        format.json { render :show, status: :ok, location: @referral }
+      if @referralpage.update(referralpage_params)
+        format.html { redirect_to page_referralpage_path, notice: 'referralpage was successfully updated.' }
+        format.json { render :show, status: :ok, location: @referralpage }
       else
         format.html { render :edit }
-        format.json { render json: @referral.errors, status: :unprocessable_entity }
+        format.json { render json: @referralpage.errors, status: :unprocessable_entity }
       end
     end
   end
 
-  # DELETE /referrals/1
-  # DELETE /referrals/1.json
+  # DELETE /referralpages/1
+  # DELETE /referralpages/1.json
   def destroy
-    @referral.destroy
+    @referralpage.destroy
     respond_to do |format|
-      format.html { redirect_to referrals_url, notice: 'Referral was successfully destroyed.' }
+      format.html { redirect_to referralpages_url, notice: 'referralpage was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_referral
-      @referral = Referral.find(params[:id])
+    def set_referralpage
+      @referralpage = referralpage.find(params[:id])
       @page = Page.find(params[:page_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def referral_params
-      params.require(:referral).permit(:facebook, :twitter, :image, :navcolor, :rheadline, :rheadlinecolor, :rbackgroundcolor, :rboxcolor, :rcountcolor, :rhow, :rhowcolor, :rightheadline, :rightsub, :rightcolor, :bottomsub, :reward1, :reward2, :reward3, :reward4)
+    def referralpage_params
+      params.require(:referralpage).permit(:facebook, :twitter, :image, :navcolor, :rheadline, :rheadlinecolor, :rbackgroundcolor, :rboxcolor, :rcountcolor, :rhow, :rhowcolor, :rightheadline, :rightsub, :rightcolor, :bottomsub, :reward1, :reward2, :reward3, :reward4)
     end
 end

@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20160203044554) do
     t.integer  "user_id"
   end
 
-  create_table "referrals", force: :cascade do |t|
+  create_table "referralpages", force: :cascade do |t|
     t.string   "navcolor"
     t.string   "rheadline"
     t.string   "rheadlinecolor"

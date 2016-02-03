@@ -1,5 +1,5 @@
-class AddPagesToReferrals < ActiveRecord::Migration
+class AddPagesToreferralpages < ActiveRecord::Migration
   def change
-    add_column :referrals, :page_id, :integer
+    add_column :referralpages, :page_id, :integer
   end
 end

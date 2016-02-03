@@ -1,6 +1,6 @@
-class AddSharemessageToReferrals < ActiveRecord::Migration
+class AddSharemessageToreferralpages < ActiveRecord::Migration
   def change
-    add_column :referrals, :twitter, :string
-    add_column :referrals, :facebook, :string
+    add_column :referralpages, :twitter, :string
+    add_column :referralpages, :facebook, :string
   end
 end
