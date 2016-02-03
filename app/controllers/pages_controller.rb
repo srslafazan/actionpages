@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   # GET /pages
   # GET /pages.json
   def index
-    @pages = current_user.pages
+    @pages = Page.where(:user_id => current_user)
   end
 
   # GET /pages/1

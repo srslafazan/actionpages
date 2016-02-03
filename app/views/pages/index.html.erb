@@ -19,4 +19,7 @@
     <%= link_to 'New Page', new_page_path, class: "btn btn-success btn-lg" %>
     </div>
   </div>
+
+  <% else %>
+   <%= render 'landing' %>
 <% end %>
