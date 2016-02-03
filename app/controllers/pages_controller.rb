@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   # GET /pages
   # GET /pages.json
   def index
-    @pages = Page.all
+    @pages = current_user.pages
   end
 
   # GET /pages/1
@@ -16,7 +16,6 @@ class PagesController < ApplicationController
   # GET /pages/new
   def new
     @page = Page.new
-
   end
 
   # GET /pages/1/edit

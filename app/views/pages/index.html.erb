@@ -1,20 +1,22 @@
 <%= render "nav" %>
-<div class="container">
-  <div class="jumbotron">
-    <p id="notice"><%= notice %></p>
 
-    <h1>Pages</h1>
-        <% @pages.each do |page| %>
-            <h2><%= page.headline %><h2>
-            <%= link_to image_tag(page.image.url(:med)), page %>
-      
-            <%= link_to 'Edit', page, class: "btn btn-info btn-lg" %>
-            <%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-info btn-lg" %>
-        <% end %>
-   
+<% if user_signed_in? %>
+  <div class="container">
+    <div class="jumbotron">
+      <p id="notice"><%= notice %></p>
+      <h1>Pages</h1>
+          <% @pages.each do |page| %>
+              <h2><%= page.headline %><h2>
+              <%= link_to image_tag(page.image.url(:med)), page %>
+        
+              <%= link_to 'Edit', page, class: "btn btn-info btn-lg" %>
+              <%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-info btn-lg" %>
+          <% end %>
+     
 
-    <br>
+      <br>
 
-  <%= link_to 'New Page', new_page_path, class: "btn btn-success btn-lg" %>
+    <%= link_to 'New Page', new_page_path, class: "btn btn-success btn-lg" %>
+    </div>
   </div>
-</div>
+<% end %>
