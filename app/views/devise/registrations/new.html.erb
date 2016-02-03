@@ -1,3 +1,7 @@
+<div class="errorbox">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= devise_error_messages! %>
+</div>
 <div class="onboarding-box">
   <div class="panel panel-primary">
     <div class="panel-heading">
@@ -5,9 +9,13 @@
     </div>
     
     <div class="panel-body">
- 
-        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-          <%= devise_error_messages! %>
+
+          <%= fields_for :account do |a| %>
+            <div class="field">
+              <%= a.label :name, "Account Name" %><br>
+              <%= a.text_field :name, autofocus: true %>
+            </div>
+          <% end %>
 
           <div class="field">
             <%= f.label :email %><br />

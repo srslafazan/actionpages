@@ -4,7 +4,8 @@ class PagesController < ApplicationController
   # GET /pages
   # GET /pages.json
   def index
-    @pages = Page.where(:user_id => current_user)
+    @account = Account.all
+    @pages = Page.all
   end
 
   # GET /pages/1
@@ -66,7 +67,7 @@ class PagesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_page
-      @page = Page.find(params[:id])
+      @page = Pages.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

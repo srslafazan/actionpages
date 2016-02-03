@@ -3,8 +3,9 @@
 <% if user_signed_in? %>
   <div class="container">
     <div class="jumbotron">
+
       <p id="notice"><%= notice %></p>
-      <h1>Pages</h1>
+      <h1><%= current_user.account.name %></h1>
           <% @pages.each do |page| %>
               <h2><%= page.headline %><h2>
               <%= link_to image_tag(page.image.url(:med)), page %>
