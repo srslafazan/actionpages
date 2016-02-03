@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
          has_many :pages
          has_many :refrrals, through: :pages
 
-	     accepts_nested_attributes_for :account
+	       accepts_nested_attributes_for :account
 	     
        after_initialize :set_account
 	     private
