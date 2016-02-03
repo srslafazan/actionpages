@@ -16,6 +16,7 @@ class PagesController < ApplicationController
   # GET /pages/new
   def new
     @page = Page.new
+
   end
 
   # GET /pages/1/edit
@@ -26,6 +27,7 @@ class PagesController < ApplicationController
   # POST /pages.json
   def create
     @page = Page.new(page_params)
+    @page.user = current_user 
 
     respond_to do |format|
       if @page.save
