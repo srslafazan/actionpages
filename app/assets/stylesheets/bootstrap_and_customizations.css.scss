@@ -1,5 +1,27 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+// Home page background image
+.landing-bg {
+  background: url('west.jpeg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 700px;
+  margin-top: -20px;
+  background-color:transparent;
+  z-index:-1;
+}
+
+.landing-center {
+    text-align: center;
+    color:  white;
+    margin: auto auto;
+    padding: 30vh;
+}
+
+// pages background image full hight
 .bg-image {
 	 height:100vh;
 }
