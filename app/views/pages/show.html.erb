@@ -21,11 +21,8 @@
 		</h1>
 
 		<br><br><br>
-	
-		<form>
- 		 <input type="text" class="span2">
-  		<button type="submit" class="btn btn-sm btn-<%= @page.buttoncolor %>"><%= @page.buttontext %></button>
-		</form>	
+		<%= render partial: "subscribers/form", locals: {subscriberable: @page} %>
+		
 	</div>
 	
 	<%= render "edit_modal" %>
