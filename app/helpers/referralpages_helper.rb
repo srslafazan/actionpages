@@ -1,0 +1,2 @@
+module ReferralpagesHelper
+end

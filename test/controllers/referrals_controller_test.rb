@@ -1,14 +1,14 @@
 require 'test_helper'
 
-class ReferralsControllerTest < ActionController::TestCase
+class referralpagesControllerTest < ActionController::TestCase
   setup do
-    @referral = referrals(:one)
+    @referralpage = referralpages(:one)
   end
 
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:referrals)
+    assert_not_nil assigns(:referralpages)
   end
 
   test "should get new" do
@@ -16,34 +16,34 @@ class ReferralsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create referral" do
-    assert_difference('Referral.count') do
-      post :create, referral: { bottomsub: @referral.bottomsub, navcolor: @referral.navcolor, rbackgroundcolor: @referral.rbackgroundcolor, rboxcolor: @referral.rboxcolor, rcountcolor: @referral.rcountcolor, reward1: @referral.reward1, reward2: @referral.reward2, reward3: @referral.reward3, reward4: @referral.reward4, rheadline: @referral.rheadline, rheadlinecolor: @referral.rheadlinecolor, rhow: @referral.rhow, rhowcolor: @referral.rhowcolor, rightcolor: @referral.rightcolor, rightheadline: @referral.rightheadline, rightsub: @referral.rightsub }
+  test "should create referralpage" do
+    assert_difference('referralpage.count') do
+      post :create, referralpage: { bottomsub: @referralpage.bottomsub, navcolor: @referralpage.navcolor, rbackgroundcolor: @referralpage.rbackgroundcolor, rboxcolor: @referralpage.rboxcolor, rcountcolor: @referralpage.rcountcolor, reward1: @referralpage.reward1, reward2: @referralpage.reward2, reward3: @referralpage.reward3, reward4: @referralpage.reward4, rheadline: @referralpage.rheadline, rheadlinecolor: @referralpage.rheadlinecolor, rhow: @referralpage.rhow, rhowcolor: @referralpage.rhowcolor, rightcolor: @referralpage.rightcolor, rightheadline: @referralpage.rightheadline, rightsub: @referralpage.rightsub }
     end
 
-    assert_redirected_to referral_path(assigns(:referral))
+    assert_redirected_to referralpage_path(assigns(:referralpage))
   end
 
-  test "should show referral" do
-    get :show, id: @referral
+  test "should show referralpage" do
+    get :show, id: @referralpage
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @referral
+    get :edit, id: @referralpage
     assert_response :success
   end
 
-  test "should update referral" do
-    patch :update, id: @referral, referral: { bottomsub: @referral.bottomsub, navcolor: @referral.navcolor, rbackgroundcolor: @referral.rbackgroundcolor, rboxcolor: @referral.rboxcolor, rcountcolor: @referral.rcountcolor, reward1: @referral.reward1, reward2: @referral.reward2, reward3: @referral.reward3, reward4: @referral.reward4, rheadline: @referral.rheadline, rheadlinecolor: @referral.rheadlinecolor, rhow: @referral.rhow, rhowcolor: @referral.rhowcolor, rightcolor: @referral.rightcolor, rightheadline: @referral.rightheadline, rightsub: @referral.rightsub }
-    assert_redirected_to referral_path(assigns(:referral))
+  test "should update referralpage" do
+    patch :update, id: @referralpage, referralpage: { bottomsub: @referralpage.bottomsub, navcolor: @referralpage.navcolor, rbackgroundcolor: @referralpage.rbackgroundcolor, rboxcolor: @referralpage.rboxcolor, rcountcolor: @referralpage.rcountcolor, reward1: @referralpage.reward1, reward2: @referralpage.reward2, reward3: @referralpage.reward3, reward4: @referralpage.reward4, rheadline: @referralpage.rheadline, rheadlinecolor: @referralpage.rheadlinecolor, rhow: @referralpage.rhow, rhowcolor: @referralpage.rhowcolor, rightcolor: @referralpage.rightcolor, rightheadline: @referralpage.rightheadline, rightsub: @referralpage.rightsub }
+    assert_redirected_to referralpage_path(assigns(:referralpage))
   end
 
-  test "should destroy referral" do
-    assert_difference('Referral.count', -1) do
-      delete :destroy, id: @referral
+  test "should destroy referralpage" do
+    assert_difference('referralpage.count', -1) do
+      delete :destroy, id: @referralpage
     end
 
-    assert_redirected_to referrals_path
+    assert_redirected_to referralpages_path
   end
 end
