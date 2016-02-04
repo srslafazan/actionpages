@@ -31,7 +31,7 @@ class ReferralpagesController < ApplicationController
 
     respond_to do |format|
       if @referralpage.save
-        format.html { redirect_to @page, notice: 'referralpage was successfully created.' }
+        format.html { redirect_to @page, notice: 'Referral page was successfully created.' }
         format.json { render :show, status: :created, location: @referralpage }
       else
         format.html { render :new }
@@ -45,7 +45,7 @@ class ReferralpagesController < ApplicationController
   def update
     respond_to do |format|
       if @referralpage.update(referralpage_params)
-        format.html { redirect_to page_referralpage_path, notice: 'referralpage was successfully updated.' }
+        format.html { redirect_to page_referralpage_path, notice: 'Referral page was successfully updated.' }
         format.json { render :show, status: :ok, location: @referralpage }
       else
         format.html { render :edit }
@@ -59,7 +59,7 @@ class ReferralpagesController < ApplicationController
   def destroy
     @referralpage.destroy
     respond_to do |format|
-      format.html { redirect_to referralpages_url, notice: 'referralpage was successfully destroyed.' }
+      format.html { redirect_to referralpages_url, notice: 'Referral page was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

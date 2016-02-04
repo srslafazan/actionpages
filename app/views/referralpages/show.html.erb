@@ -1,10 +1,9 @@
 <div class="navbar refnav" style="background-color: <%= @referralpage.navcolor %> ">
-
-  <%= link_to 'Edit', edit_page_referralpage_path, class: "navbar-brand", data: {remote: true, toggle: "modal", target: "#myModal"} %> 
-    <%= link_to 'Back', @referralpage.page, class: "navbar-brand" %>
-    <%= link_to 'Home', root_path, class: "navbar-brand" %>
-    
-
+  <% if user_signed_in? %>
+    <%= link_to 'Edit', edit_page_referralpage_path, class: "navbar-brand", data: {remote: true, toggle: "modal", target: "#myModal"} %> 
+      <%= link_to 'Back', @referralpage.page, class: "navbar-brand" %>
+      <%= link_to 'Home', root_path, class: "navbar-brand" %>
+  <% end %>
 </div>
 
   <div class="top text-center" style="background-color: <%= @referralpage.rbackgroundcolor %>">
