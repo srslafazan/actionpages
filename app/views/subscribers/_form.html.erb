@@ -1,0 +1,7 @@
+		<%= form_for [subscriberable, Subscriber.new] do |f| %>
+			
+				<%= f.text_field :email, placeholder: "Email" %>
+			
+			<%= f.submit class: "btn btn-sm btn-primary" %>
+
+		<% end %>
