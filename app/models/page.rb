@@ -4,6 +4,5 @@ class Page < ActiveRecord::Base
 
 	belongs_to :user
 	has_one :referralpage
-	has_many  :subscribers, as: :subscriberable
 
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160204140525) do
+ActiveRecord::Schema.define(version: 20160204202416) do
 
   create_table "pages", force: :cascade do |t|
     t.string   "headline"
@@ -55,15 +55,13 @@ ActiveRecord::Schema.define(version: 20160204140525) do
     t.string   "facebook"
   end
 
-  create_table "subscribers", force: :cascade do |t|
-    t.string   "email"
-    t.string   "subscriberable_type"
-    t.integer  "subscriberable_id"
-    t.integer  "referrer_id"
-    t.integer  "referral_code"
-    t.integer  "page_id"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+  create_table "rewards", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "level"
+    t.float    "discount"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "referralpage_id"
   end
 
   create_table "users", force: :cascade do |t|

@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
   devise_for :users
+  resources :rewards 
   resources :pages do
-      resources :subscribers, module: :pages
      resources :referralpages do
      end
   end

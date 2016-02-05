@@ -4,12 +4,13 @@ class ReferralpagesController < ApplicationController
   # GET /referralpages
   # GET /referralpages.json
   def index
-    @referralpages = referralpage.all
+    @referralpages = Referralpage.all
   end
 
   # GET /referralpages/1
   # GET /referralpages/1.json
   def show
+    @rewards = @referralpage.rewards
     @twitter_message = @referralpage.twitter
   end
 
@@ -31,7 +32,7 @@ class ReferralpagesController < ApplicationController
 
     respond_to do |format|
       if @referralpage.save
-        format.html { redirect_to @page, notice: 'Referral page was successfully created.' }
+        format.html { redirect_to @referralpage, notice: 'Referral page was successfully created.' }
         format.json { render :show, status: :created, location: @referralpage }
       else
         format.html { render :new }
