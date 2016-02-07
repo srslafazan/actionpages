@@ -10,7 +10,7 @@ class ReferralpagesController < ApplicationController
   # GET /referralpages/1
   # GET /referralpages/1.json
   def show
-    @rewards = @referralpage.rewards
+    @rewards = Reward.all
     @twitter_message = @referralpage.twitter
   end
 
