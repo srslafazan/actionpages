@@ -1,7 +1,7 @@
 <div class="row">
   <% @rewards.each do |reward| %>
   	<div class="col-md-3">
-  		<%= link_to 'Edit', edit_reward_path, data: {remote: true, toggle: "modal", target: "#rewardModal"} %> 
+  		
   		<%= link_to 'Delete', reward, method: :delete, data: { confirm: 'Are you sure?' } %>
   		<div class="box">
 		  <a href="javascript:void(0)" class="btn btn-warning btn-fab"><i class="material-icons"><%= reward.level %></i></a>

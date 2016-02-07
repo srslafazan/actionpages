@@ -47,10 +47,9 @@
     <%= @referralpage.rhow %>
   </h4>
   <p class="text-center" style="color: <%= @referralpage.rcountcolor %>"> You've refered 5 friends. Keep Sharing!</p>
- 
+        <%= render "rewards/edit_modal" %>
        <div style="color: <%= @referralpage.rboxcolor %>">
         <%= render 'rewards/index', :rewards => @rewards %>
-        <%= render "rewards/edit_modal" %>
       </div>
 
 </div>
