@@ -38,7 +38,7 @@ class RewardsController < ApplicationController
   def update
     respond_to do |format|
       if @reward.update(reward_params)
-        format.html { redirect_to page_referralpage_path, notice: 'Referral page was successfully updated.' }
+        format.html { redirect_to rewards_path, notice: 'Referral was successfully updated.' }
         format.json { render :show, status: :ok, location: @reward }
       else
         format.html { render :edit }
@@ -52,7 +52,7 @@ class RewardsController < ApplicationController
   def destroy
     @reward.destroy
     respond_to do |format|
-      format.html { redirect_to page_referralpages_path, notice: 'Reward page was successfully destroyed.' }
+      format.html { redirect_to reward_path, notice: 'Reward was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

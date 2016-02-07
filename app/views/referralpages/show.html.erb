@@ -6,6 +6,8 @@
   <% end %>
 </div>
 
+<%= render "edit_modal" %>
+
   <div class="top text-center" style="background-color: <%= @referralpage.rbackgroundcolor %>">
  
       <div class="row toprow">
@@ -15,7 +17,6 @@
             <%= @referralpage.rheadline %>
           </h2>
         </div>
-      <%= render 'rewards/index', :rewards => @rewards%>
 
       <div class="col-md-6" style="color: <%= @referralpage.rightcolor %>">
         <h2>
@@ -46,52 +47,13 @@
     <%= @referralpage.rhow %>
   </h4>
   <p class="text-center" style="color: <%= @referralpage.rcountcolor %>"> You've refered 5 friends. Keep Sharing!</p>
-
-      <%= render "rewards/index" , :rewards => @rewards %>
-   <div class="row">
-
-    <div class="col-md-3">
-      <div class="box" style="color: <%= @referralpage.rboxcolor %>">
-        <a href="javascript:void(0)" class="btn btn-success btn-fab"><i class="material-icons">5</i></a>
-        <h3>  
-          <%= @referralpage.reward1 %>
-        </h3>
-    </div>
-  </div>
-
-     <div class="col-md-3">
-      <div class="box" style="color: <%= @referralpage.rboxcolor %>">
-        <a href="javascript:void(0)" class="btn btn-warning btn-fab"><i class="material-icons">10</i></a>
-
-        <h3>
-          <%= @referralpage.reward2 %>
-        </h3>
+ 
+       <div style="color: <%= @referralpage.rboxcolor %>">
+        <%= render 'rewards/index', :rewards => @rewards %>
+        <%= render "rewards/edit_modal" %>
       </div>
-     </div>
-
-    <div class="col-md-3">
-      <div class="box" style="color: <%= @referralpage.rboxcolor %>">
-        <a href="javascript:void(0)" class="btn btn-warning btn-fab"><i class="material-icons">25</i></a>
-      <h3>
-        <%= @referralpage.reward3 %>
-      </h3>
-
-      </div>
-    </div>
-
-    <div class="col-md-3">
-      <div class="box" style="color: <%= @referralpage.rboxcolor %>">
-        <a href="javascript:void(0)" class="btn btn-warning btn-fab"><i class="material-icons">50</i></a>
-
-        <h3>
-          <%= @referralpage.reward4 %>
-        </h3>
-     
-      </div>
-    </div>
-  </div>
 
 </div>
-<%= render "edit_modal" %>
+
 
 
