@@ -4,12 +4,11 @@ class RewardsController < ApplicationController
   def show
   end
   def index
-  	@rewards = Reward.all
+  	@rewards = Reward.where(:referralpage_id => @reward.referralpage.id)
   end
 
   # GET /referralpages/new
   def new
-    
     @reward = Reward.new
   end
 
