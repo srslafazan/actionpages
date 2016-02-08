@@ -5,5 +5,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
          has_many :pages
-         has_many :refrralpages, through: :pages
+         has_many :refrral_pages, through: :pages
 end

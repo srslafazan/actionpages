@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20160204202416) do
     t.integer  "user_id"
   end
 
-  create_table "referralpages", force: :cascade do |t|
+  create_table "referral_pages", force: :cascade do |t|
     t.string   "navcolor"
     t.string   "rheadline"
     t.string   "rheadlinecolor"
@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(version: 20160204202416) do
     t.float    "discount"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.integer  "referralpage_id"
+    t.integer  "referral_page_id"
   end
 
   create_table "users", force: :cascade do |t|

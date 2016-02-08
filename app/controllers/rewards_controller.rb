@@ -4,20 +4,17 @@ class RewardsController < ApplicationController
   def show
   end
   def index
-  	@rewards = Reward.where(:referralpage_id => @reward.referralpage.id)
+  	@rewards = Reward.where(:referral_page_id => @reward.referral_page.id)
   end
 
-  # GET /referralpages/new
+
   def new
     @reward = Reward.new
   end
 
-  # GET /referralpages/1/edit
   def edit
   end
 
-  # POST /referralpages
-  # POST /referralpages.json
   def create
     @reward = Reward.new(reward_params)
 
@@ -32,8 +29,6 @@ class RewardsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /referralpages/1
-  # PATCH/PUT /referralpages/1.json
   def update
     respond_to do |format|
       if @reward.update(reward_params)
@@ -46,8 +41,7 @@ class RewardsController < ApplicationController
     end
   end
 
-  # DELETE /referralpages/1
-  # DELETE /referralpages/1.json
+
   def destroy
     @reward.destroy
     respond_to do |format|

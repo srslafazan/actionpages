@@ -10,7 +10,7 @@ class PagesController < ApplicationController
   # GET /pages/1
   # GET /pages/1.json
   def show
-     @referralpage = @page.referralpage 
+     @referral_page = @page.referral_page 
   end
 
   # GET /pages/new

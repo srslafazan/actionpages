@@ -1,14 +1,14 @@
 require 'test_helper'
 
-class referralpagesControllerTest < ActionController::TestCase
+class ReferralPagesControllerTest < ActionController::TestCase
   setup do
-    @referralpage = referralpages(:one)
+    @referral_page = referral_pages(:one)
   end
 
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:referralpages)
+    assert_not_nil assigns(:referral_pages)
   end
 
   test "should get new" do
@@ -16,34 +16,34 @@ class referralpagesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create referralpage" do
-    assert_difference('referralpage.count') do
-      post :create, referralpage: { bottomsub: @referralpage.bottomsub, navcolor: @referralpage.navcolor, rbackgroundcolor: @referralpage.rbackgroundcolor, rboxcolor: @referralpage.rboxcolor, rcountcolor: @referralpage.rcountcolor, reward1: @referralpage.reward1, reward2: @referralpage.reward2, reward3: @referralpage.reward3, reward4: @referralpage.reward4, rheadline: @referralpage.rheadline, rheadlinecolor: @referralpage.rheadlinecolor, rhow: @referralpage.rhow, rhowcolor: @referralpage.rhowcolor, rightcolor: @referralpage.rightcolor, rightheadline: @referralpage.rightheadline, rightsub: @referralpage.rightsub }
+  test "should create referral_page" do
+    assert_difference('referral_page.count') do
+      post :create, referral_page: { bottomsub: @referral_page.bottomsub, navcolor: @referral_page.navcolor, rbackgroundcolor: @referral_page.rbackgroundcolor, rboxcolor: @referral_page.rboxcolor, rcountcolor: @referral_page.rcountcolor, reward1: @referral_page.reward1, reward2: @referral_page.reward2, reward3: @referral_page.reward3, reward4: @referral_page.reward4, rheadline: @referral_page.rheadline, rheadlinecolor: @referral_page.rheadlinecolor, rhow: @referral_page.rhow, rhowcolor: @referral_page.rhowcolor, rightcolor: @referral_page.rightcolor, rightheadline: @referral_page.rightheadline, rightsub: @referral_page.rightsub }
     end
 
-    assert_redirected_to referralpage_path(assigns(:referralpage))
+    assert_redirected_to referral+page_path(assigns(:referral_page))
   end
 
-  test "should show referralpage" do
-    get :show, id: @referralpage
+  test "should show referral page" do
+    get :show, id: @referral_page
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @referralpage
+    get :edit, id: @referral_page
     assert_response :success
   end
 
-  test "should update referralpage" do
-    patch :update, id: @referralpage, referralpage: { bottomsub: @referralpage.bottomsub, navcolor: @referralpage.navcolor, rbackgroundcolor: @referralpage.rbackgroundcolor, rboxcolor: @referralpage.rboxcolor, rcountcolor: @referralpage.rcountcolor, reward1: @referralpage.reward1, reward2: @referralpage.reward2, reward3: @referralpage.reward3, reward4: @referralpage.reward4, rheadline: @referralpage.rheadline, rheadlinecolor: @referralpage.rheadlinecolor, rhow: @referralpage.rhow, rhowcolor: @referralpage.rhowcolor, rightcolor: @referralpage.rightcolor, rightheadline: @referralpage.rightheadline, rightsub: @referralpage.rightsub }
-    assert_redirected_to referralpage_path(assigns(:referralpage))
+  test "should update referral page" do
+    patch :update, id: @referral_page, referral_page: { bottomsub: @referral_page.bottomsub, navcolor: @referral_page.navcolor, rbackgroundcolor: @referral_page.rbackgroundcolor, rboxcolor: @referral_page.rboxcolor, rcountcolor: @referral_page.rcountcolor, reward1: @referral_page.reward1, reward2: @referral_page.reward2, reward3: @referral_page.reward3, reward4: @referral_page.reward4, rheadline: @referral_page.rheadline, rheadlinecolor: @referral_page.rheadlinecolor, rhow: @referral_page.rhow, rhowcolor: @referral_page.rhowcolor, rightcolor: @referral_page.rightcolor, rightheadline: @referral_page.rightheadline, rightsub: @referral_page.rightsub }
+    assert_redirected_to referral_page_path(assigns(:referral_page))
   end
 
-  test "should destroy referralpage" do
-    assert_difference('referralpage.count', -1) do
-      delete :destroy, id: @referralpage
+  test "should destroy referral page" do
+    assert_difference('referral_page.count', -1) do
+      delete :destroy, id: @referral_page
     end
 
-    assert_redirected_to referralpages_path
+    assert_redirected_to referral_pages_path
   end
 end

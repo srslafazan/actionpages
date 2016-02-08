@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :rewards 
   resources :pages do
-     resources :referralpages do
+     resources :referral_pages do
      end
   end
   # The priority is based upon order of creation: first created -> highest priority.

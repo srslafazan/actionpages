@@ -1,0 +1,58 @@
+<div class="navbar refnav" style="background-color: <%= @referral_page.navcolor %> ">
+  <% if user_signed_in? %>
+    <%= link_to 'Edit', edit_page_referral_page_path, class: "navbar-brand", data: {remote: true, toggle: "modal", target: "#myModal"} %> 
+      <%= link_to 'Back', @referral_page.page, class: "navbar-brand" %>
+      <%= link_to 'Home', root_path, class: "navbar-brand" %>
+  <% end %>
+</div>
+
+<%= render "edit_modal" %>
+
+  <div class="top text-center" style="background-color: <%= @referral_page.rbackgroundcolor %>">
+ 
+      <div class="row toprow">
+        <div class="col-md-6 imagetop" style="background-image: url('<%= @referral_page.image.url %>'); no-repeat 50% 50% fixed; background-size: cover; -moz-background-size: cover; -o-background-size: cover; -webkit-background-size: cover;">
+
+          <h2 style="color: <%= @referral_page.rheadlinecolor %>; padding-top: 20%;">
+            <%= @referral_page.rheadline %>
+          </h2>
+        </div>
+
+      <div class="col-md-6" style="color: <%= @referral_page.rightcolor %>">
+        <h2>
+         <%= @referral_page.rightheadline %>
+        <h2>
+
+        <h3>
+          <%= @referral_page.rightsub %>
+        </h3>
+
+        <h4>
+        <%= @referral_page.bottomsub %>
+        </h4>
+
+        <div class="copy-link"><%= root_url %>?ref=82938e4D</div>
+        <div class="social-links">
+            <a href="" class="fb" target="_blank"></a>
+            <div class="sep"></div>
+            <a href="" class="twit" target="_blank"></a>
+        </div>
+      </div>
+
+  </div>
+</div>
+
+<div class="bottom">
+  <h4 class="text-center" style="color: <%= @referral_page.rhowcolor %>">
+    <%= @referral_page.rhow %>
+  </h4>
+  <p class="text-center" style="color: <%= @referral_page.rcountcolor %>"> You've refered 5 friends. Keep Sharing!</p>
+        <%= render "rewards/reward_modal" %>
+       <div style="color: <%= @referral_page.rboxcolor %>">
+        <%= render 'rewards/index', :rewards => @rewards %>
+      </div>
+
+</div>
+
+
+

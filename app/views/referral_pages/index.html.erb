@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="jumbotron">
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Referral Pages</h1>
+
+  <tbody>
+    <% @referral_pages.each do |referral_page| %>
+      <tr>
+        <td><%= referral_page.navcolor %></td>
+        <td><%= referral_page.rheadline %></td>
+        <td><%= referral_page.rheadlinecolor %></td>
+        <td><%= referral_page.rbackgroundcolor %></td>
+        <td><%= referral_page.rboxcolor %></td>
+        <td><%= referral_page.rcountcolor %></td>
+        <td><%= referral_page.rhow %></td>
+        <td><%= referral_page.rhowcolor %></td>
+        <td><%= referral_page.rightheadline %></td>
+        <td><%= referral_page.rightsub %></td>
+        <td><%= referral_page.rightcolor %></td>
+        <td><%= referral_page.bottomsub %></td>
+        <td><%= referral_page.reward1 %></td>
+        <td><%= referral_page.reward2 %></td>
+        <td><%= referral_page.reward3 %></td>
+        <td><%= referral_page.reward4 %></td>
+        <td><%= link_to 'Show', page_referral_page_path %></td>
+        <td><%= link_to 'Edit', edit_referral_page_path(referral_page) %></td>
+        <td><%= link_to 'Destroy', referral_page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Referral Page', new_referral_page_path, class: "btn btn-lg btn-success" %>
+
+  </div>
+</div>

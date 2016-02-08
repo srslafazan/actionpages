@@ -1,5 +1,5 @@
-class AddPaperclipToreferralpage < ActiveRecord::Migration
+class AddPaperclipToReferralPage < ActiveRecord::Migration
   def change
-  	add_attachment :referralpages, :image
+  	add_attachment :referral_pages, :image
   end
 end

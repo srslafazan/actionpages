@@ -1,6 +1,6 @@
-class Createreferralpages < ActiveRecord::Migration
+class CreateReferralPages < ActiveRecord::Migration
   def change
-    create_table :referralpages do |t|
+    create_table :referral_pages do |t|
       t.string :navcolor
       t.string :rheadline
       t.string :rheadlinecolor
